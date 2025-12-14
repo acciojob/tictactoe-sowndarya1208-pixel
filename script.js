@@ -2,7 +2,7 @@
 // Global Variables for Game State
 let playerOneName = '';
 let playerTwoName = '';
-let currentPlayer = 'X'; // X starts the game
+let currentPlayer = 'x'; // X starts the game
 let gameActive = true;
 // Tracks the state of the board, IDs 1-9
 let gameState = ["", "", "", "", "", "", "", "", ""]; 
@@ -45,7 +45,7 @@ function startGame() {
     boardScreen.classList.remove('hide');
 
     // Initialize game state display
-    currentPlayer = 'X';
+    currentPlayer = 'x';
     gameActive = true;
     updateMessage(`${playerOneName}, you're up!`);
 }
@@ -94,7 +94,7 @@ function handleResultValidation() {
     }
 
     if (roundWon) {
-        const winnerName = (currentPlayer === 'X') ? playerOneName : playerTwoName;
+        const winnerName = (currentPlayer === 'x') ? playerOneName : playerTwoName;
         updateMessage(`${winnerName} congratulations you won!`);
         gameActive = false;
         restartButton.classList.remove('hide');
@@ -115,14 +115,14 @@ function handleResultValidation() {
 }
 
 function handlePlayerChange() {
-    currentPlayer = (currentPlayer === 'X') ? 'O' : 'X';
-    const currentName = (currentPlayer === 'X') ? playerOneName : playerTwoName;
+    currentPlayer = (currentPlayer === 'x') ? 'o' : 'x';
+    const currentName = (currentPlayer === 'x') ? playerOneName : playerTwoName;
     updateMessage(`${currentName}, you're up!`);
 }
 
 function resetGame() {
     gameActive = true;
-    currentPlayer = 'X';
+    currentPlayer = 'x';
     gameState = ["", "", "", "", "", "", "", "", ""];
     updateMessage(`${playerOneName}, you're up!`);
     restartButton.classList.add('hide');
