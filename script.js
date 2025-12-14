@@ -37,8 +37,8 @@ cells.forEach(cell => cell.addEventListener('click', handleCellClick));
 // --- Functions ---
 
 function startGame() {
-    playerOneName = document.getElementById('player-1').value || 'Player 1';
-    playerTwoName = document.getElementById('player-2').value || 'Player 2';
+    playerOneName = document.getElementById('player1').value || 'Player1';
+    playerTwoName = document.getElementById('player2').value || 'Player2';
 
     // Switch screens
     setupScreen.classList.add('hide');
