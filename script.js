@@ -1,3 +1,4 @@
+//your JS code here. If required.
 // Global Variables for Game State
 let playerOneName = '';
 let playerTwoName = '';
@@ -46,7 +47,7 @@ function startGame() {
     // Initialize game state display
     currentPlayer = 'X';
     gameActive = true;
-    updateMessage(`harsh, you're up!`);
+    updateMessage(`${playerOneName}, you're up!`);
 }
 
 function updateMessage(msg) {
@@ -94,7 +95,7 @@ function handleResultValidation() {
 
     if (roundWon) {
         const winnerName = (currentPlayer === 'X') ? playerOneName : playerTwoName;
-        updateMessage(`jaindiv, congratulations you won!`);
+        updateMessage(`${winnerName} congratulations you won!`);
         gameActive = false;
         restartButton.classList.remove('hide');
         return;
@@ -116,7 +117,7 @@ function handleResultValidation() {
 function handlePlayerChange() {
     currentPlayer = (currentPlayer === 'X') ? 'O' : 'X';
     const currentName = (currentPlayer === 'X') ? playerOneName : playerTwoName;
-    updateMessage(`jaindiv, you're up!`);
+    updateMessage(`${currentName}, you're up!`);
 }
 
 function resetGame() {
