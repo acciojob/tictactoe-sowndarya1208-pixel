@@ -1,16 +1,49 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+    <div class="container">
+        
+        <!-- Player Name Input Screen (Visible initially) -->
+        <div id="setup-screen">
+            <h1>Tic Tac Toe Setup</h1>
+            <label for="player-1">Player 1 (X) Name:</label>
+            <input type="text" id="player-1" placeholder="Enter Name">
+            <label for="player-2">Player 2 (O) Name:</label>
+            <input type="text" id="player-2" placeholder="Enter Name">
+            <button id="submit">Start Game</button>
+        </div>
 
+        <!-- Tic Tac Toe Board Screen (Hidden initially) -->
+        <div id="board-screen" class="hide">
+            <h1>Tic Tac Toe</h1>
+            
+            <!-- Message div to show whose turn it is or the winner -->
+            <div class="message"></div>
+
+            <!-- The 3x3 Grid Board -->
+            <div class="board">
+                <!-- Cells with IDs 1 through 9 -->
+                <div class="cell" id="1"></div>
+                <div class="cell" id="2"></div>
+                <div class="cell" id="3"></div>
+                <div class="cell" id="4"></div>
+                <div class="cell" id="5"></div>
+                <div class="cell" id="6"></div>
+                <div class="cell" id="7"></div>
+                <div class="cell" id="8"></div>
+                <div class="cell" id="9"></div>
+            </div>
+            <!-- Optional restart button after game ends -->
+            <button id="restart-button" class="hide">Restart Game</button>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
 </body>
-
 </html>
